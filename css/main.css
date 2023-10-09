@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #111729;
+  font-family: 'Outfit', sans-serif;
+}
+
+input {
+  outline: none;
+}
+
+/* GENERAL */
+.container {
+  position: relative;
+}
+
+picture.bg-page {
+  width: 100%;
+  position: fixed;
+  text-align: right;
+  z-index: -10000;
+}
+
+picture.bg-page img {
+  margin-top: 30px;
+  width: 750px;
+  margin-right: 50px;
+}
+
+.container-qr {
+  width: 100%;
+  position: absolute;
+  margin-top: 250px;
+  text-align: center;
+}
+
+.container-qr picture.logo {
+  text-align: center;
+}
+
+.container-qr picture img {
+  width: 250px;
+  margin-bottom: 35px;
+}
+
+.container-qr .form-qr-generate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-qr .form-qr-generate .input-text {
+  width: 100%;
+  position: relative;
+}
+
+.container-qr .form-qr-generate .button-text {
+  position: absolute;
+  right: 24.2%;
+}
+
+.container-qr .form-qr-generate input {
+  width: 50%;
+  padding: 18px;
+  border-radius: 14px;
+  border: 2px solid #3662E3;
+  background-color: #111729;
+  font-size: 16px;
+  font-weight: bold;
+  color: #364153;
+}
+
+.container-qr .form-qr-generate input::placeholder {
+  font-weight: bold;
+  color: #364153;
+  font-size: 13px;
+}
+
+.container-qr .form-qr-generate button.button-generate {
+  background-color: #3662E3;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  width: 120px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.container-qr .form-qr-generate button.button-generate:hover {
+  opacity: .8;
+  transition: all .3s;
+}
+
+/* GENERANDO QR */
+.container-generate {
+  width: 100%;
+}
+
+.container-generate nav {
+  padding: 30px 50px;
+}
+
+.container-generate nav img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.load-qr-content {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.load-qr-content .image-qr {
+  margin: 0 auto;
+  display: flex;
+  width: 260px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #1e2c51;
+  border-radius: 10000000px;
+}
+
+.load-qr-content .image-qr #qrcode img {
+  background-color: #F2F5F9;
+  padding: 30px;
+  border-radius: 22px;
+  width: 200px;
+}
+
+.load-qr-content .button-action {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.load-qr-content .button-action button {
+  width: 150px;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #3662E3;
+  color: #F2F5F9;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.load-qr-content .button-action button:hover {
+  opacity: .8;
+  transition: all .3s;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+  picture.bg-page img {
+    width: 600px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  picture.bg-page {
+    position: fixed;
+  }
+
+  picture.bg-page img {
+    margin-left: 300px;
+  }
+
+  .container-qr .form-qr-generate .button-text {
+    right: 8%;
+  }
+
+  .container-qr .form-qr-generate input {
+    width: 80%;
+  }
+
+  .container-generate nav img {
+    width: 130px;
+  }
+}

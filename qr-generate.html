@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA code generator</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <picture class="bg-page">
+      <img src="images/bg-illustration.svg" alt="background-page">
+    </picture>
+
+    <!--Generación QR-->
+    <div class="container-generate">
+      <nav>
+        <img src="images/logo-qr-generator.svg" alt="logo" title="Regresar" id="redirect">
+      </nav>
+
+      <div class="load-qr-content">
+        <div class="image-qr">
+          <div id="qrcode"></div>
+        </div>
+
+        <div class="button-action">
+          <button id="Download">Download</button>
+          <button onclick="alert('en proceso....')">Share</button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/main_generate_qr.js"></script>
+</body>
+
+</html>
